@@ -1,0 +1,13 @@
+BHP/
+├── server/
+│   ├── app.py  # Flask server file
+│   ├── util.py  # Utility functions for prediction
+│   ├── banglore_home_prices_model.pickle  # Trained model
+│   ├── columns.json  # Column data for locations
+├── client/
+│   ├── static/
+│   │   ├── background_img.jpg  ✅ (Place your background image here)
+│   │   ├── app.css  ✅ (CSS file)
+│   │   ├── app.js  ✅ (JavaScript file)
+│   ├── templates/
+│   │   ├── app.html  ✅ (HTML file)
