@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("/static/background_img.jpg") no-repeat center center fixed;
+
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #444;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    color: black;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0056b3, #00a3cc);
+    transform: scale(1.05);
+}
+
+/* Progress Bar */
+#progressBar {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 15px;
+    display: none;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    transition: width 1s ease-in-out;
+}
+
+#uiEstimatedPrice {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 6px;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Genie</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Price Genie</h1>
+
+        <label>Area (Square Feet):</label>
+        <input type="text" id="uiSqft" value="1000">
+
+        <label>BHK:</label>
+        <select id="uiBHK">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label>Bathrooms:</label>
+        <select id="uiBathrooms">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label>Location:</label>
+        <select id="uiLocations">
+            <option value="" disabled selected>Loading locations...</option>
+        </select>
+
+        <button onclick="onClickedEstimatePrice()">Estimate Price</button>
+
+        <!-- Progress Bar -->
+        <div id="progressBar">
+            <div class="progress"></div>
+        </div>
+
+        <div id="uiEstimatedPrice"></div>
+    </div>
+</body>
+</html>
