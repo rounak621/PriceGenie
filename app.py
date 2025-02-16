@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import util
+import os  # ✅ Import os for environment variables
 
 app = Flask(__name__, static_folder='../client/static', template_folder='../client/templates')
 CORS(app)
@@ -27,4 +28,7 @@ def predict_home_price():
 
 if __name__ == '__main__':
     print("Starting Flask server...")
-    app.run(debug=True)
+
+    # ✅ Use the assigned Render PORT
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
